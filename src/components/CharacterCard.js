@@ -5,6 +5,15 @@ import { CSSTransition } from "react-transition-group";
 export default function CharacterCard(props) {
   return (
     <div>
+      <CSSTransition
+        in={true}
+        appear={true}
+        enter={true}
+        exit={true}
+        timeout={10000}
+        classNames="slide"
+        unmountOnExit
+      >
       <Card>
         <Image src={props.character.image} wrapped ui={false} />
         <Card.Content>
@@ -26,6 +35,7 @@ export default function CharacterCard(props) {
           </p>
         </Card.Content>
       </Card>
+      </CSSTransition>
     </div>
   );
 }
