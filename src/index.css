@@ -44,7 +44,11 @@ header h1 {
 }
 
 
-
+form{
+  /* margin:0 auto; */
+  display: flex;
+  justify-content: center;
+}
 
 .fade-appear{
   opacity:0;
