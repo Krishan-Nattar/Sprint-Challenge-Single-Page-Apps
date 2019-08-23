@@ -1,25 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function SearchForm({ onSearch }) {
   // STRETCH TODO: Add stateful logic for query/form data
   const [name, setName] = useState('');
 
   const handleInputChange = (e) =>{
-    // console.log(e.target.value);
     setName(e.target.value);
   }
+
+  useEffect(()=>{
+    console.log(name);
+  },[name]);
 
 
   return (
     <section className="search-form">
-      <form onSubmit={() => onSearch(name)}>
+      <form onSubmit={(e) => e.preventDefault()}>
         <input
           onChange={handleInputChange}
           placeholder="Search"
           value={name}
           name="name"
         />
-        <button type="submit">Search</button>
+        {/* <button type="submit">Search</button> */}
       </form>
     </section>
   );
