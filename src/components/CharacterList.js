@@ -18,12 +18,15 @@ export default function CharacterList() {
 if(!characters){
   return null
 }
+const onSearch = (search) =>{
+  console.log(search);
+}
   return (
     <div>
-      <SearchForm />
+      <SearchForm  onSearch={onSearch}/>
     <section className="character-list grid-view">
       {characters.map(character=>{
-        return <CharacterCard key={character.id} character={character} />
+        return <CharacterCard key={character.id} character={character}/>
       })}
     </section>
     </div>

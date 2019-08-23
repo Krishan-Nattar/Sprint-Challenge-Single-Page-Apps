@@ -9,7 +9,8 @@ export default function SearchForm({ onSearch }) {
   }
 
   useEffect(()=>{
-    console.log(name);
+    // console.log(name);
+    onSearch(name);
   },[name]);
 
 
