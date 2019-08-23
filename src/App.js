@@ -12,11 +12,12 @@ export default function App() {
   return (
     <main>
       <Header />
-      <WelcomePage />
+      {/* <WelcomePage /> */}
       {/* <TabNav /> */}
       {/* <CharacterList /> */}
       {/* <LocationsList /> */}
       {/* <EpisodeList /> */}
+      <Route exact path="/" component={WelcomePage}/>
     </main>
   );
 }
