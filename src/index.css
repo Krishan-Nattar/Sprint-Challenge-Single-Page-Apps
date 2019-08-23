@@ -57,7 +57,7 @@ header h1 {
   transition: 2000ms ease-out;
 }
 
-.fade-enter{
+/* .fade-enter{
   opacity:0;
   z-index:1;
   transition: 2000ms ease-out;
@@ -70,9 +70,9 @@ header h1 {
 .fade-enter.fade-enter-active{
   opacity:1;
   transition: 2000ms ease-out;
-}
+} */
 
-.fade-appear{
+/* .fade-appear{
   opacity:0;
   z-index:1;
   transition: 2000ms ease-out;
@@ -86,25 +86,5 @@ header h1 {
 .fade-appear.fade-appear-active{
   opacity:1;
   transition: 2000ms ease-out;
-}
+} */
 
-
-.fade-exit{
-  opacity:1;
-  transition: opacity 2000ms ease-out;
-}
-
-.fade-exit-active{
-  opacity:0;
-  transition:opacity 2000ms ease-out;
-}
-
-.fade-exit.fade-exit-active{
-  opacity:0;
-  transition:opacity 2000ms ease-out;
-}
-
-.fade-exit-done{
-  opacity:0;
-  transition: opacity 2000ms ease-out;
-}

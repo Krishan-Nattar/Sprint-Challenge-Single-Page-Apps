@@ -8,8 +8,8 @@ export default function CharacterCard(props) {
       <CSSTransition
         in={true}
         appear={true}
-        enter={true}
-        exit={true}
+        // enter={true}
+        // exit={true}
         timeout={10000}
         classNames="fade"
         unmountOnExit
