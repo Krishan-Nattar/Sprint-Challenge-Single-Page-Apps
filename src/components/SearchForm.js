@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Input } from 'semantic-ui-react'
 
 export default function SearchForm({ onSearch }) {
   // STRETCH TODO: Add stateful logic for query/form data
@@ -17,7 +18,7 @@ export default function SearchForm({ onSearch }) {
   return (
     <section className="search-form">
       <form onSubmit={(e) => e.preventDefault()}>
-        <input
+        <Input
           onChange={handleInputChange}
           placeholder="Search"
           value={name}

@@ -42,7 +42,16 @@ header h1 {
   color:white !important;
   background:grey !important;
 }
-
+.search-bar-section{
+  /* width:20px; */
+  display:flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+button{
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
 form{
   /* margin:0 auto; */
