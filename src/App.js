@@ -5,6 +5,7 @@ import CharacterList from './components/CharacterList';
 import EpisodeList from './components/EpisodeList';
 import LocationsList from './components/LocationsList';
 import WelcomePage from './components/WelcomePage';
+import {Route} from 'react-router-dom';
 
 
 export default function App() {
