@@ -2,7 +2,6 @@ import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 
 export default function CharacterCard(props) {
-  console.log(props.character);
   return (
     <div>
       <Card>
