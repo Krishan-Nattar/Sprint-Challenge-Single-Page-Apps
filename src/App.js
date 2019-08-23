@@ -13,7 +13,7 @@ export default function App() {
     <main>
       <Header />
       {/* <WelcomePage /> */}
-      {/* <TabNav /> */}
+      <TabNav />
       {/* <CharacterList /> */}
       {/* <LocationsList /> */}
       {/* <EpisodeList /> */}
