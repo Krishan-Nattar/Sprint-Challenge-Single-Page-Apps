@@ -27,7 +27,6 @@ const EpisodeList = () => {
   let next = pagination.next;
 
   const handleClick = (button) =>{
-    console.log(button);
     if(button=='next'){
       if(next != ""){
         setNumber(number+1);

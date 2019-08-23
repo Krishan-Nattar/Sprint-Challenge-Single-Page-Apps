@@ -19,6 +19,7 @@ export default function CharacterList() {
         setPagination(response.data.info);
       });
   }, [page, number]);
+
   if (!characters || !pagination) {
     return null;
   }
@@ -27,7 +28,6 @@ export default function CharacterList() {
   let next = pagination.next;
 
   const handleClick = (button) =>{
-    console.log(button);
     if(button=='next'){
       if(next != ""){
         setNumber(number+1);
