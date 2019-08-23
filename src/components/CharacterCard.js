@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 
 export default function CharacterCard(props) {
+  console.log(props.character);
   return (
   
   <div><Card>
@@ -9,7 +10,7 @@ export default function CharacterCard(props) {
   <Card.Content>
     <Card.Header>{props.character.name}</Card.Header>
     <Card.Meta>
-      <span className="date">{props.character.status}</span>
+      <span className="date">{props.character.species}: {props.character.status}</span>
     </Card.Meta>
     <Card.Description>
       <p>Location: {props.character.location.name}</p>
