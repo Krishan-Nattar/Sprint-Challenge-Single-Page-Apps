@@ -4,12 +4,15 @@ import axios from 'axios';
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
 
+  const [characters, setCharacters] = useState();
+
   useEffect(()=>{
     console.log('characterlist')
     axios
         .get('https://rickandmortyapi.com/api/character/')
         .then(response=>{
-            console.log('response',response);
+            console.log('response',response.data.results);
+            setCharacters(response.data.results);
         });
 },[]);
 

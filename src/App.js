@@ -1,6 +1,9 @@
 import React from "react";
 import TabNav from "./components/TabNav.js";
 import Header from "./components/Header.js";
+import CharacterList from './components/CharacterList';
+import EpisodeList from './components/EpisodeList';
+import LocationsList from './components/LocationsList';
 
 
 export default function App() {
@@ -8,6 +11,7 @@ export default function App() {
     <main>
       <Header />
       {/* <TabNav /> */}
+      <CharacterList />
     </main>
   );
 }
