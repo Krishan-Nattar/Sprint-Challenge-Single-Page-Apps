@@ -18,7 +18,7 @@ export default function CharacterCard(props) {
   </Card.Content>
   <Card.Content extra>
     <p>
-      <Icon name="user" />
+      <Icon name="play" />
       Episodes: {props.character.episode.length}
     </p>
   </Card.Content>
