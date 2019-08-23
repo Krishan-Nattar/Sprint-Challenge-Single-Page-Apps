@@ -26,8 +26,23 @@ export default function CharacterList() {
 
   let previous = pagination.prev;
   let next = pagination.next;
-  console.log(previous);
-  console.log(next);
+
+  const handleClick = (button) =>{
+    console.log(button);
+    if(button=='next'){
+      if(next != ""){
+        setNumber(number+1);
+      }
+    } else {
+      if(previous != ""){
+        setNumber(number-1);
+      }
+    }
+  }
+
+
+  // console.log(previous);
+  // console.log(next);
   const onSearch = search => {
     setPage(search);
   };
@@ -35,9 +50,9 @@ export default function CharacterList() {
     <div>
       <SearchForm onSearch={onSearch} />
       <div className="search-bar-section">
-      <Button className="ui button">Previous</Button>
+      <Button className="ui button" onClick={()=>handleClick('previous')}>Previous</Button>
       
-      <Button>Next</Button>
+      <Button onClick={()=>handleClick('next')}>Next</Button>
       </div>
       <section className="character-list grid-view">
         {characters.map(character => {
