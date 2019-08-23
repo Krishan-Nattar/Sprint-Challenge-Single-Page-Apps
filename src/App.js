@@ -18,6 +18,9 @@ export default function App() {
       {/* <LocationsList /> */}
       {/* <EpisodeList /> */}
       <Route exact path="/" component={WelcomePage}/>
+      <Route path="/characters" component={CharacterList}  />
+      <Route path="/locations" component={LocationsList}  />
+      <Route path="/episodes" component={EpisodeList}  />
     </main>
   );
 }
