@@ -7,15 +7,18 @@ export default function CharacterList() {
 
   const [characters, setCharacters] = useState();
   const [page, setPage] = useState("");
+  const [pagination, setPagination] = useState('');
 
   useEffect(() => {
     axios
-      .get(`https://rickandmortyapi.com/api/character/?name=${page}`)
+      .get(`https://rickandmortyapi.com/api/character/?name=${page}&page=2`)
       .then(response => {
         setCharacters(response.data.results);
+        setPagination(response.data.info);
+        console.log(response.data.info)
       });
   }, [page]);
-  if (!characters) {
+  if (!characters || !pagination) {
     return null;
   }
   const onSearch = search => {
