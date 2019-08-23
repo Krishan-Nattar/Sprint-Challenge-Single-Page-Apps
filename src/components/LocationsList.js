@@ -3,12 +3,17 @@ import axios from "axios";
 import LocationCard from "./LocationCard";
 import SearchForm from "./SearchForm";
 import { Button } from 'semantic-ui-react';
+import useLocalStorage from './useLocalStorage';
 
 export default function LocationsList() {
   const [locations, setLocations] = useState();
+  // const [locations, setLocations] = useLocalStorage("locations", );
   const [page, setPage] = useState("");
+  // const [page, setPage] = useLocalStorage("page", "");
   const [pagination, setPagination] = useState('');
+  // const [pagination, setPagination] = useLocalStorage('pagination', '');
   const [number, setNumber] = useState(1)
+  // const [number, setNumber] = useLocalStorage("number", 1);
 
   useEffect(() => {
     axios

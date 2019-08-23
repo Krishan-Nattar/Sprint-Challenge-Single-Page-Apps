@@ -6,11 +6,13 @@ export default function SearchForm({ onSearch }) {
   const [name, setName] = useState('');
 
   const handleInputChange = (e) =>{
+    // console.log(e)
+    // console.log('here')
     setName(e.target.value);
   }
 
   useEffect(()=>{
-    // console.log(name);
+    // console.log('here')
     onSearch(name);
   },[name]);
 
@@ -24,7 +26,6 @@ export default function SearchForm({ onSearch }) {
           value={name}
           name="name"
         />
-        {/* <button type="submit">Search</button> */}
       </form>
     </section>
   );

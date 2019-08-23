@@ -39,7 +39,8 @@ const EpisodeList = () => {
   }
 
   const onSearch = search => {
-    setPage(search);
+    setPage(search)
+    // console.log('episode here');
   };
 
   return (
