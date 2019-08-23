@@ -11,7 +11,7 @@ export default function CharacterList() {
 
   useEffect(()=>{
     axios
-        .get(`https://rickandmortyapi.com/api/character/${page}`)
+        .get(`https://rickandmortyapi.com/api/character/?name=${page}`)
         .then(response=>{
             setCharacters(response.data.results);
         });
@@ -20,7 +20,6 @@ if(!characters){
   return null
 }
 const onSearch = (search) =>{
-  // console.log(search);
   setPage(search);
 }
   return (
