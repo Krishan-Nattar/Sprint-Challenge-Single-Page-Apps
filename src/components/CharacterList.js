@@ -8,11 +8,9 @@ export default function CharacterList() {
   const [characters, setCharacters] = useState();
 
   useEffect(()=>{
-    console.log('characterlist')
     axios
         .get('https://rickandmortyapi.com/api/character/')
         .then(response=>{
-            console.log('response',response.data.results);
             setCharacters(response.data.results);
         });
 },[]);
@@ -22,7 +20,7 @@ if(!characters){
   return (
     <section className="character-list grid-view">
       {characters.map(character=>{
-        return <CharacterCard />
+        return <CharacterCard key={character.id} character={character} />
       })}
     </section>
   );
