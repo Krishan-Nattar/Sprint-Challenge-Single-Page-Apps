@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import LocationCard from './LocationCard';
 
 export default function LocationsList() {
 
@@ -16,7 +17,20 @@ export default function LocationsList() {
         });
     },[]);
 
-    return ( <div></div> );
+
+
+    if(!locations){
+        return null
+      }
+
+    return ( 
+    
+        <section className="location-list grid-view">
+
+{locations.map(location=>{
+        return <LocationCard />
+      })}
+    </section> );
 
 
 }

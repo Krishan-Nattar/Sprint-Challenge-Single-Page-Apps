@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import EpisodeCard from './EpisodeCard';
 
 const EpisodeList = () => {
     
@@ -15,7 +16,19 @@ const EpisodeList = () => {
         });
     },[]);
 
-    return ( <div></div> );
+
+    if(!episodes){
+        return null
+      }
+
+    return ( 
+    
+        <section className="episode-list grid-view">
+
+{episodes.map(character=>{
+        return <EpisodeCard />
+      })}
+    </section> );
 }
  
 export default EpisodeList;
