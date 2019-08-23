@@ -17,7 +17,6 @@ export default function CharacterList() {
       .then(response => {
         setCharacters(response.data.results);
         setPagination(response.data.info);
-        // console.log(response.data.info)
       });
   }, [page, number]);
   if (!characters || !pagination) {
@@ -40,9 +39,6 @@ export default function CharacterList() {
     }
   }
 
-
-  // console.log(previous);
-  // console.log(next);
   const onSearch = search => {
     setPage(search);
   };
