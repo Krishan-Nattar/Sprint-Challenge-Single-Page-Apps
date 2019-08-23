@@ -12,7 +12,8 @@ export default function App() {
       <Header />
       {/* <TabNav /> */}
       {/* <CharacterList /> */}
-      <LocationsList />
+      {/* <LocationsList /> */}
+      <EpisodeList />
     </main>
   );
 }

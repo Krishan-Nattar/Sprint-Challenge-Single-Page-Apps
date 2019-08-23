@@ -7,7 +7,6 @@ const EpisodeList = () => {
     const [episodes, setEpisodes] = useState();
 
     useEffect(()=>{
-        console.log('episodelist')
         axios
         .get('https://rickandmortyapi.com/api/episode/')
         .then(response=>{
@@ -25,8 +24,8 @@ const EpisodeList = () => {
     
         <section className="episode-list grid-view">
 
-{episodes.map(character=>{
-        return <EpisodeCard />
+{episodes.map(episode=>{
+        return <EpisodeCard key={episode.id} />
       })}
     </section> );
 }
