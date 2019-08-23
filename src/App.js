@@ -11,7 +11,8 @@ export default function App() {
     <main>
       <Header />
       {/* <TabNav /> */}
-      <CharacterList />
+      {/* <CharacterList /> */}
+      <LocationsList />
     </main>
   );
 }
