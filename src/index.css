@@ -37,3 +37,74 @@ main {
 header h1 {
   text-align: center;
 }
+
+
+
+
+.fade-appear{
+  opacity:0;
+  z-index:1;
+  transition: 2000ms ease-out;
+}
+
+.fade-appear-active{
+  opacity:1;
+  transition: 2000ms ease-out;
+}
+
+.fade-appear.fade-appear-active{
+  opacity:1;
+  transition: 2000ms ease-out;
+}
+
+.fade-enter{
+  opacity:0;
+  z-index:1;
+  transition: 2000ms ease-out;
+}
+
+.fade-enter-active{
+  opacity:1;
+  transition: 2000ms ease-out;
+}
+.fade-enter.fade-enter-active{
+  opacity:1;
+  transition: 2000ms ease-out;
+}
+
+.fade-appear{
+  opacity:0;
+  z-index:1;
+  transition: 2000ms ease-out;
+}
+
+.fade-appear-active{
+  opacity:1;
+  transition: 2000ms ease-out;
+}
+
+.fade-appear.fade-appear-active{
+  opacity:1;
+  transition: 2000ms ease-out;
+}
+
+
+.fade-exit{
+  opacity:1;
+  transition: opacity 2000ms ease-out;
+}
+
+.fade-exit-active{
+  opacity:0;
+  transition:opacity 2000ms ease-out;
+}
+
+.fade-exit.fade-exit-active{
+  opacity:0;
+  transition:opacity 2000ms ease-out;
+}
+
+.fade-exit-done{
+  opacity:0;
+  transition: opacity 2000ms ease-out;
+}

@@ -11,7 +11,7 @@ export default function CharacterCard(props) {
         enter={true}
         exit={true}
         timeout={10000}
-        classNames="slide"
+        classNames="fade"
         unmountOnExit
       >
       <Card>
