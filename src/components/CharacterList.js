@@ -7,19 +7,21 @@ export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
 
   const [characters, setCharacters] = useState();
+  const [page, setPage] = useState('')
 
   useEffect(()=>{
     axios
-        .get('https://rickandmortyapi.com/api/character/')
+        .get(`https://rickandmortyapi.com/api/character/${page}`)
         .then(response=>{
             setCharacters(response.data.results);
         });
-},[]);
+},[page]);
 if(!characters){
   return null
 }
 const onSearch = (search) =>{
-  console.log(search);
+  // console.log(search);
+  setPage(search);
 }
   return (
     <div>
