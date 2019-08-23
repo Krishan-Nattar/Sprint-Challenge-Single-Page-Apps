@@ -25,7 +25,7 @@ const EpisodeList = () => {
         <section className="episode-list grid-view">
 
 {episodes.map(episode=>{
-        return <EpisodeCard key={episode.id} />
+        return <EpisodeCard key={episode.id} episode={episode} />
       })}
     </section> );
 }
