@@ -1,8 +1,18 @@
 import React from "react";
+import { CSSTransition } from "react-transition-group";
 
 export default function WelcomePage() {
   return (
     <section className="welcome-page">
+      <CSSTransition
+        in={true}
+        appear={true}
+        // enter={true}
+        // exit={true}
+        timeout={10000}
+        classNames="fade"
+        unmountOnExit
+      >
       <header>
         <h1>Welcome to the ultimate fan site!</h1>
         <img
@@ -11,6 +21,7 @@ export default function WelcomePage() {
           alt="rick"
         />
       </header>
+      </CSSTransition>
     </section>
   );
 }
